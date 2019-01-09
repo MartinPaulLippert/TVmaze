@@ -115,6 +115,7 @@ namespace TVMaze.Services
                         var jsonString = readTask.Result;
 
                         show = JsonNet.Deserialize<Show>(jsonString);
+                        notCompleted = false;
                     }
                     else if (response.StatusCode == HttpStatusCode.TooManyRequests)
                     {
@@ -124,6 +125,7 @@ namespace TVMaze.Services
                     else
                     {
                         _logger.LogWarning("Error getting show details id={0} url=[{1}] Status Code=[{2}] Reason=[{3}]", key, url, response.StatusCode, response.ReasonPhrase);
+                        notCompleted = false;
                     }
                 } while (notCompleted);
 
