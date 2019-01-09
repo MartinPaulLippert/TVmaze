@@ -25,15 +25,15 @@ namespace TVmaze.Domain.Models
 
     public class Network
     {
-        public int id { get; set; }
+        public int? id { get; set; }
         public string name { get; set; }
         public Country country { get; set; }
     }
 
     public class Externals
     {
-        public int tvrage { get; set; }
-        public int thetvdb { get; set; }
+        public int? tvrage { get; set; }
+        public int? thetvdb { get; set; }
         public string imdb { get; set; }
     }
 
@@ -85,7 +85,7 @@ namespace TVmaze.Domain.Models
 
     public class Person
     {
-        public int id { get; set; }
+        public int? id { get; set; }
         public string url { get; set; }
         public string name { get; set; }
         public Country2 country { get; set; }
@@ -114,7 +114,7 @@ namespace TVmaze.Domain.Models
 
     public class Character
     {
-        public int id { get; set; }
+        public int? id { get; set; }
         public string url { get; set; }
         public string name { get; set; }
         public Image3 image { get; set; }
@@ -143,18 +143,18 @@ namespace TVmaze.Domain.Models
         public string language { get; set; }
         public List<string> genres { get; set; }
         public string status { get; set; }
-        public int runtime { get; set; }
+        public int? runtime { get; set; }
         public string premiered { get; set; }
         public string officialSite { get; set; }
         public Schedule schedule { get; set; }
         public Rating rating { get; set; }
-        public int weight { get; set; }
+        public int? weight { get; set; }
         public Network network { get; set; }
         public Network webChannel { get; set; }
         public Externals externals { get; set; }
         public Image image { get; set; }
         public string summary { get; set; }
-        public int updated { get; set; }
+        public int? updated { get; set; }
         public Links _links { get; set; }
         public Embedded _embedded { get; set; }
     }
