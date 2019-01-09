@@ -32,7 +32,7 @@ namespace TVmaze.Service
             _logger.LogInformation("Start TVmaze Service");
 
             _timer = new Timer(DoWork, null, TimeSpan.Zero,
-                TimeSpan.FromSeconds(15));
+                TimeSpan.FromHours(1));
 
             _cancellationToken = cancellationToken;
 
